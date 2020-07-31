@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.microphone-wrapper {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.microphone {
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.microphone-pulsate {
+    width: 50px;
+    height: 50px;
+    border: 3px solid red;
+    border-radius: 50%;
+    /* animation: pulsate infinite 1s;
+    -webkit-animation: pulsate infinite 1s; */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        width: 50px;
+        height: 50px;
+        opacity: 1; 
+    }
+}

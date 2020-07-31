@@ -1,0 +1,43 @@
+.start-screen__wrapper {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+
+    color: white;
+}
+
+.start-screen__main-title {
+    margin-bottom: 10px;
+}
+
+.start-screen__main-description {
+    margin-bottom: 15px;
+}
+
+.start-screen__button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: rgb(232, 95, 147);
+    color: white;
+    cursor: pointer;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.start-screen {
+    /* background-color: rgb(54, 27, 27); */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}

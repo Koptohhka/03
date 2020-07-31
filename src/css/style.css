@@ -1,0 +1,706 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+html {
+    background: black;
+}
+
+body {
+    /*background: url('./assets/img/bg\ 3.png') no-repeat;*/
+    background: black;
+    position: relative;
+    z-index: -1;
+    font-size: 16px;
+    background-size: contain;
+}
+
+fieldset {
+    border: none;
+}
+
+.body-gradient {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(8, 15, 26, 0.59) 0%, rgba(86, 86, 131, 0.46) 100%);
+    z-index: -5;
+}
+
+.body-background {
+    z-index: -4;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 1130px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    padding-top: 40px;
+    margin-bottom: 57px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__inputs {
+    display: flex;
+    width: 223px;
+    justify-content: space-between;
+    height: 44px;
+}
+
+.header__input {
+    display: block;
+    background-color: transparent;
+    border: 2px solid white;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.inputs__reboot {
+    height: 100%;
+    width: 44px;
+    /*background: url('./assets/img/Intersect.svg') no-repeat;*/
+    background-position: 0 6px;
+    /*background-color: rgba(174, 181, 185, 0.5);*/
+}
+
+.reboot-arrow {
+    width: 20px;
+    height: 25px;
+    fill: white;
+
+    width: 100%;
+    height: 100%;
+}
+
+.inputs__select {
+    padding-left: 11px;
+    width: 71px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.inputs__select::after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    z-index: 1;
+    margin-top: -3px;
+
+}
+
+.inputs__degree-button {
+    width: 88px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.F,
+.C {
+    width: 44px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.F {
+    border-right: solid white;
+    border-radius: 5px 0px 0px 5px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    -moz-border-radius: 5px 0px 0px 5px;
+    -ms-border-radius: 5px 0px 0px 5px;
+    -o-border-radius: 5px 0px 0px 5px;
+}
+
+.C {
+    border-left: 1px solid white;
+}
+
+.header__search-field {
+    display: flex;
+    width: 375px;
+    justify-content: space-between;
+}
+
+.search-field__input {
+    font-weight: normal;
+    text-transform: unset;
+    padding-left: 15px;
+    width: 274px;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 5px 0px 0px 5px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    -moz-border-radius: 5px 0px 0px 5px;
+    -ms-border-radius: 5px 0px 0px 5px;
+    -o-border-radius: 5px 0px 0px 5px;
+}
+
+.search-field__search-button {
+    font-size: 14px;
+    width: 101px;
+    border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -ms-border-radius: 0px 5px 5px 0px;
+    -o-border-radius: 0px 5px 5px 0px;
+}
+
+.search-field__search-button:hover,
+.inputs__reboot:hover,
+.F:hover,
+.C:hover,
+.inputs__select:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.inputs__degree-button--active {
+    background-color: white;
+    color: black;
+    cursor: auto;
+}
+
+.inputs__reboot .reboot-arrow:hover {
+    fill: black;
+}
+
+.main {
+    color: white;
+}
+
+.main__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-left__town-title {
+    font-size: 44px;
+    line-height: 54px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.section-left__day-info {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.section-left__today-container {
+    display: flex;
+    font-weight: bold;
+    align-items: flex-end;
+
+    position: relative;
+}
+
+.today-container__degree-number {
+    position: relative;
+}
+
+.today-container__degree-title {
+    font-size: 306px;
+    /*line-height: 373px;*/
+    margin-right: 72px;
+
+    z-index: 2;
+}
+
+.today-container__degree-round {
+    position: absolute;
+    font-size: 100px;
+    line-height: 0px;
+    right: 5px;
+    /*top: calc(50% - 35px/2 - 79.5px);*/
+    top: 50px;
+    z-index: 2;
+}
+
+.today-container__cloud {
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+    top: -5px;
+    right: 0;
+}
+
+.today-container__weather-info {
+    font-size: 17px;
+    line-height: 37px;
+    padding-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.weather-info__weather-type {
+    text-transform: uppercase;
+}
+
+.section-left__another-days {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.another-days__another-day {
+    position: relative;
+}
+
+.another-day__title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+.another-day__degree {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 98px;
+}
+
+.another-day__icon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -10px;
+    right: -70px;
+    z-index: -1;
+}
+
+.main__section-left {
+    max-width: 635px;
+    width: 100%;
+}
+
+.main__section-right {
+    position: relative;
+}
+
+.section-right__map-container {
+    position: relative;
+    /*top: 20px;
+    left: 40px;
+    bottom: 0;*/
+    width: 350px;
+    height: 350px;
+
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.section-right__coords-container {
+    padding-top: 20px;
+    padding-left: 30px;
+    text-align: right;
+}
+
+.coords-container__coord-row {
+    font-weight: 500;
+    text-transform: capitalize;
+    color: white;
+}
+
+@media (max-width: 1064px) {
+    .section-right__map-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    @media (max-width: 934px) {
+        .section-right__map-container {
+            width: 250px;
+            height: 250px;
+        }
+
+        @media (max-width: 900px) {
+            .header {
+                margin-bottom: 30px;
+            }
+
+            .main__wrapper {
+                flex-direction: column;
+                position: relative;
+            }
+
+            .main__section-left {
+                max-width: 90%;
+            }
+
+            .section-left__today-container {}
+
+            .main__section-right {
+                order: -1;
+            }
+
+            .main__section-right {
+                margin-bottom: 50px;
+            }
+
+            .section-right__map-container {
+                width: 100%;
+                height: 250px;
+                /*top: -210px;
+                left: 0px;*/
+            }
+
+            .section-left__another-days {
+                margin: 0 auto;
+            }
+
+            @media (max-width: 730px) {
+                .section-left__another-days {
+                    width: 85%;
+                }
+
+                .header__search-field {
+                    width: auto;
+                }
+
+                .search-field__input {
+                    width: 230px;
+                }
+
+                .another-day__icon {
+                    width: 70px;
+                    height: 70px;
+                    right: -50px;
+                }
+
+                @media (max-width: 700px) {
+                    .section-left__town-title {
+                        font-size: 38px;
+                    }
+
+                    .today-container__degree-title {
+                        font-size: 240px;
+                        margin-right: 40px;
+                    }
+
+                    .today-container__degree-round {
+                        font-size: 65px;
+                    }
+
+                    .today-container__cloud {
+                        position: absolute;
+
+                        width: 150px;
+                        height: 150px;
+                        z-index: 5;
+                        top: -40px;
+                        right: 20px;
+                    }
+
+                    .today-container__weather-info {
+                        line-height: 28px;
+                    }
+
+                    .another-day__title {
+                        font-size: 18px;
+                        line-height: 27px;
+                    }
+
+                    .another-day__degree {
+                        font-size: 50px;
+                        line-height: 68px;
+                    }
+
+                    .another-day__icon {
+                        width: 80px;
+                        height: 80px;
+                        top: -10px;
+                        right: -40px;
+                    }
+
+                    @media (max-width: 666px) {
+                        .search-field__input {
+                            width: 180px;
+                        }
+
+                        .search-field__search-button {
+                            width: 75px;
+                            font-size: 12px;
+                        }
+
+                        .main__section-left {
+                            max-width: none;
+                        }
+
+                        @media (max-width: 600px) {
+                            .main__section-left {}
+
+                            .today-container__degree-title {}
+
+                            .today-container__degree-round {}
+
+                            @media (max-width: 570px) {
+                                .main__section-left {}
+
+                                .section-left__town-title {
+                                    font-size: 27px;
+                                }
+
+                                .today-container__degree-title {
+                                    font-size: 180px;
+                                    margin-right: 40px;
+                                }
+
+                                .today-container__degree-round {
+                                    font-size: 35px;
+                                }
+
+                                .section-left__day-info {
+                                    font-size: 18px;
+                                }
+
+                                .today-container__cloud {
+                                    position: absolute;
+
+                                    width: 100px;
+                                    height: 100px;
+                                    z-index: 5;
+                                    top: -80px;
+                                    right: 30px;
+                                }
+
+                                .header__inputs {
+                                    height: 37px;
+                                    width: 190px;
+                                }
+
+                                .header__input {
+                                    font-size: 12px;
+                                }
+
+                                .inputs__degree-button {
+                                    width: 64px;
+                                }
+
+                                .inputs__reboot,
+                                .F,
+                                .C {
+                                    width: 37px;
+                                }
+
+                                .inputs__select {
+                                    width: 57px;
+                                }
+
+                                .search-field__input {
+                                    width: 150px;
+                                }
+
+                                .search-field__search-button {
+                                    width: 60px;
+                                    font-size: 10px;
+                                }
+
+                                @media (max-width: 500px) {
+                                    .section-left__today-container {
+                                        align-items: center;
+                                    }
+
+                                    .today-container__weather-info {
+                                        padding-bottom: 0;
+                                        font-size: 14px;
+                                    }
+
+                                    .another-day__title {
+                                        font-size: 16px;
+                                    }
+
+                                    .another-day__degree {
+                                        font-size: 34px;
+                                        line-height: 43px;
+                                    }
+
+                                    @media (max-width: 460px) {
+                                        .today-container__degree-title {
+                                            font-size: 145px;
+                                        }
+
+                                        .another-day__icon {
+                                            width: 55px;
+                                            height: 55px;
+                                        }
+
+                                        .inputs__degree-button {
+                                            width: 64px;
+                                        }
+
+                                        .inputs__reboot,
+                                        .F,
+                                        .C {
+                                            width: 37px;
+                                        }
+
+                                        .inputs__select {
+                                            width: 50px;
+                                        }
+
+                                        .search-field__input {
+                                            width: 130px;
+                                        }
+
+                                        .search-field__search-button {
+                                            width: 55px;
+
+                                        }
+
+                                        .header__inputs {
+                                            width: 170px;
+                                        }
+
+                                        .today-container__cloud {
+                                            right: -20px;
+                                        }
+
+                                        @media (max-width: 480px) {
+                                            .section-left__town-title {
+                                                font-size: 21px;
+                                            }
+
+                                            .today-container__degree-title {
+                                                margin-right: 18px;
+                                            }
+
+                                            .header__inputs {
+                                                margin-bottom: 18px;
+                                            }
+
+                                            .header__wrapper {
+                                                flex-direction: column;
+                                            }
+
+                                            .header__search-field {
+                                                width: auto;
+                                                justify-content: flex-start;
+                                                height: 37px;
+                                            }
+
+                                            .search-field__input {
+                                                width: 80%;
+                                            }
+
+                                            .search-field__search-button {
+                                                width: 20%;
+                                            }
+
+                                            .section-left__another-days {
+                                                width: 87%;
+                                            }
+
+                                            .another-day__icon {
+                                                top: -30px;
+                                            }
+
+                                            .another-day__title {
+                                                font-size: 14px;
+                                            }
+
+                                            @media (max-width: 380px) {
+                                                .today-container__weather-info {
+                                                    font-size: 11px;
+                                                }
+
+                                                .today-container__degree-title {
+                                                    font-size: 110px;
+                                                }
+
+                                                .today-container__cloud {
+                                                    width: 70px;
+                                                    height: 70px;
+                                                    top: -40px;
+                                                    right: 20px;
+                                                }
+
+                                                .another-day__title {
+                                                    font-size: 10px;
+                                                }
+
+                                                .another-day__degree {
+                                                    font-size: 24px;
+                                                    line-height: 21px;
+                                                }
+
+                                                .another-day__icon {
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    top: 20px;
+                                                    right: -10px;
+                                                }
+
+                                                .main__section-left {
+                                                    padding-bottom: 10px;
+                                                }
+
+                                                .another-days__another-day {
+                                                    margin-right: 6px;
+                                                }
+
+                                                @media (max-width: 330px) {
+                                                    .today-container__cloud {
+                                                        right: -15body-backgroundpx;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
