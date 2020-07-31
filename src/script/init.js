@@ -144,17 +144,17 @@ async function renderFutureWeatherInfo(cityName) {
     const data = await response.json();
     const template = `<ul class="section-left__another-days">
     <li class="another-days__another-day">
-        <p class="another-day__title">${DATE_OBJECT.DAY_NAMES[currentLanguage][getDayOfWeek(data.data[1].datetime)]}</p>
+        <p class="another-day__title">${DATE_OBJECT.DAY_NAMES[currentLanguage][getDayOfWeek(data.data[1].datetime) + 1]}</p>
         <p class="another-day__degree">${Math.ceil(data.data[1].temp)}°</p>
         <img src="${TEST[getSvgIconNameByWeatherCode(data.data[1].weather.code)]}" alt="" class="another-day__icon">
     </li>
     <li class="another-days__another-day">
-        <p class="another-day__title">${DATE_OBJECT.DAY_NAMES[currentLanguage][getDayOfWeek(data.data[2].datetime)]}</p>
+        <p class="another-day__title">${DATE_OBJECT.DAY_NAMES[currentLanguage][getDayOfWeek(data.data[2].datetime) + 1]}</p>
         <p class="another-day__degree">${Math.ceil(data.data[2].temp)}°</p>
         <img src="${TEST[getSvgIconNameByWeatherCode(data.data[2].weather.code)]}" alt="" class="another-day__icon">
     </li>
     <li class="another-days__another-day">
-        <p class="another-day__title">${DATE_OBJECT.DAY_NAMES[currentLanguage][getDayOfWeek(data.data[3].datetime)]}</p>
+        <p class="another-day__title">${DATE_OBJECT.DAY_NAMES[currentLanguage][getDayOfWeek(data.data[3].datetime) + 1]}</p>
         <p class="another-day__degree">${Math.ceil(data.data[3].temp)}°</p>
         <img src="${TEST[getSvgIconNameByWeatherCode(data.data[3].weather.code)]}" alt="" class="another-day__icon">
     </li>

@@ -2,7 +2,7 @@
   "name": "fancy-weather",
   "version": "1.0.0",
   "description": "roling scopes school task",
-  "main": "index.js",
+  "main": "init.js",
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "npx webpack --production"
